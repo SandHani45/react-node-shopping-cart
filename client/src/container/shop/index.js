@@ -10,16 +10,32 @@ import {frets} from '../../theme/FixedCategories';
 
 class Shop extends Component {
 
+    state = {
+        grid:'',
+        limit:6,
+        skip:0,
+        filters : {
+            brand:[],
+            frets:[],
+            wood:[],
+            price:[]
+        }
+    }
     componentDidMount(){
         this.props.dispatch(woodAction());
         this.props.dispatch(brandAction());
     }
 
     handleFilter = (filters,category) =>{
-        console.log(filters)
+        const newFilters  = {...this.state.filters};
+        newFilters[category] = filters;
+        this.setState({
+            filters:newFilters
+        })
     }
     
     render() {
+        console.log(this.state.filters)
         const products = this.props.products;
         return (
         <div>
@@ -45,7 +61,7 @@ class Shop extends Component {
                             initState={false}
                             title ="Woods"
                             list={products.woods}
-                            handleFilter={(filters)=>this.handleFilter(filters,'woods')}
+                            handleFilter={(filters)=>this.handleFilter(filters,'wood')}
                         />
                     </div>
                     <div className="right">
