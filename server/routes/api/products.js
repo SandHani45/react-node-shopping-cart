@@ -29,7 +29,7 @@ router.post('/brand',auth,admin,(req,res)=>{
 // @route  get api/products/brand
 // @desc   Test Brand router
 // @access Public
-router.get('/brand',(req,res)=>{
+router.get('/brands',(req,res)=>{
     Brand.find()
         .then(brand=>res.json({
             brand:brand
@@ -58,7 +58,7 @@ router.post('/wood',auth,admin,(req,res)=>{
 // @route  get api/products/wood
 // @desc   Test Brand router
 // @access Public
-router.get('/wood',(req,res)=>{
+router.get('/woods',(req,res)=>{
     Wood.find()
         .then(wood=>res.json({
             wood:wood
