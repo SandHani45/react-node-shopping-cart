@@ -3,6 +3,8 @@ import { Link, withRouter} from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import { logOutAction } from '../../../actions/authAction';
+import faShoppingBag from '@fortawesome/fontawesome-free-solid/faShoppingBag';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 class Header extends Component {
 
@@ -14,7 +16,7 @@ class Header extends Component {
                 public: true
             },
             {
-                name:'Guitars',
+                name:'Photos & Videos',
                 linkTo:'/shop',
                 public: true
             }
@@ -61,7 +63,9 @@ class Header extends Component {
             <div className="cart_link" key={i}>
                 <span>{user.cart ? user.cart.length:0}</span>
                 <Link to={item.linkTo}>
-                    {item.name}
+                <FontAwesomeIcon 
+                        icon={faShoppingBag}  
+                    />{item.name}
                 </Link>
             </div>
         )
@@ -118,7 +122,9 @@ class Header extends Component {
                 <div className="container">
                     <div className="left">
                         <div className="logo">
-                            WAVES
+                            <Link to="/" style={{color:"#d0295f"}}>
+                                SANCART
+                            </Link>
                         </div>
                     </div>
                     <div className="right">

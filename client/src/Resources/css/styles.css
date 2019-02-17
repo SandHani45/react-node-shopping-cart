@@ -3,6 +3,7 @@ body {
     padding:0;
     font-family: 'Oswald', sans-serif;
     color: #404040;
+    background: linear-gradient(-45deg, #f6f5f3 0%, #f6f5f3 100%);
 }
 
 .container {
@@ -14,7 +15,8 @@ body {
 }
 .page_container {
     min-height: 75vh;
-    padding-top: 85px;
+    padding-top: 78px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);
 }
 .main_loader {
     text-align: center;
@@ -31,7 +33,8 @@ a {
 }
 
 .bck_b_light {
-    background: #999592;
+    background:#f6f5f3;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);
 }
 
 .bck_b_dark {
@@ -189,8 +192,10 @@ select {
     text-transform: uppercase;
     padding: 10px;
     display: table;
-    background: #e1ddc3;
+    background: #d0295f;
     margin-top: 10px;
+    color: white;
+    font-weight: 600;
 }
 
 .card_link,
@@ -198,16 +203,18 @@ select {
 .add_to_cart_link {
     width: 100%;
     border: 1px solid #dcdcdc;
-    padding: 5px 10px;
+    padding:11px;
     display: block;
     box-sizing: border-box;
     text-align: center;
     font-size: 14px;
     text-transform: uppercase;
-    color: #c3c0b1;
+    color: #b4234e;
     background: #f8f8f8;
+    -webkit-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
     cursor: pointer;
+    font-weight: 700;
 }
 .card_link:hover,
 .bag_link:hover,
@@ -255,7 +262,7 @@ header {
 
 header .logo {
     font-family: 'Monoton', cursive;
-    color: #ffffff;
+    color: #d0295f;
     font-size: 40px;
     padding: 11px 0px;
 }
@@ -440,7 +447,9 @@ footer .business_nfo .nfo {
 ==============================*/
 
 .card_block {
-    margin: 110px 0px;
+    margin: 14px 17px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.17) !important;
+    padding: 34px;
 }
 
 .card_block .title {
@@ -455,18 +464,25 @@ footer .business_nfo .nfo {
     width: 33.3%;
     margin-bottom: 20px;
 }
-
+a{
+    color: #3b3646;
+}
 /*============================
         CARD ITEM
 ==============================*/
 
 .card_item_wrapper {
     flex-grow: 1;
-    width: 25%;
-    padding: 0 20px;
+    /* width: 25%; */
+    margin: 8px;
+    /* padding: 26px 31px; */
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.17) !important;
+    border-radius: 23px !important;
+    background: -webkit-linear-gradient(135deg, #a92047 0%, #d0295f 100%);
+    background: linear-gradient(-45deg, #a92047 0%, #d0295f 100%);
 }
 
 .card_item_wrapper .image {
@@ -509,6 +525,7 @@ footer .business_nfo .nfo {
 .card_item_wrapper .actions {
     display: flex;
     padding: 15px 0 10px 0;
+    justify-content: center;
 }
 
 .card_item_wrapper .actions .button_wrapp:nth-child(1) {
